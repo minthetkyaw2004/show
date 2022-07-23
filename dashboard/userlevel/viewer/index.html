@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../node_modules/animate.css/animate.min.css">
+    <style>
+        body{
+            min-height: 200vh;
+        }
+        .flex-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .welcome-box{
+            border-radius: 20px;
+            box-shadow: 5px 5px 20px black;
+        }
+        .welcome-text {
+            font-size: 60px;
+            text-shadow: 0 2px purple, 2px 0 purple, 0 -2px purple, -2px 0 purple;
+        }
+        .project-container{
+            height: 120vh;
+            padding-bottom: 5vh;
+        }
+        .project-col {
+            border: 1px solid black;
+            box-shadow: 5px 5px 20px black;
+            border-radius: 10px;
+        }
+        .project-nine-container{
+            height: 90%;
+        }
+        .w-33{
+            width: 30%;
+        }
+        .h-33{
+            height: 30%;
+        }
+        .flex-between{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card{
+            box-shadow: 3px 3px 20px black;
+        }
+        .vh-50{
+            min-height: 50vh;
+        }
+        .img-client{
+            height: 30vh;
+        }
+        .project-row{
+            perspective: 500px;
+        }
+        .project-col{
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            transition: all 1s;
+        }
+        .project-col:hover{
+            transform: translateZ(100px);
+            box-shadow: 5px 5px 15px black;
+        }
+        .viewer-image{
+            height: 100%;
+        }
+        fieldset{
+            box-shadow: -10px 10px 20px black;
+        }
+        .skills-circle{
+            background: conic-gradient(
+                #ff2b6b,
+                #38ff38,
+                #477bff,
+                #ffff39
+            );
+        }
+    </style>
+</head>
+<body>
+    <section class="welcome-section vh-100 flex-center bg-warning">
+        <div class="welcome-box h-50 w-50 flex-center bg-danger wow animate__animated animate__rotateIn">
+            <h1 class="welcome-text text-light text-center">
+                Welcome to dashboard
+            </h1>
+        </div>
+    </section>
+
+    <section class="project-container bg-warning pt-3" id="section1">
+        <h3 class="project-topic text-center fw-bold mt-2 pb-4 fs-2">Project Samples</h3>
+        <div class="project-nine-container w-75 m-auto flex-between flex-column p-2">
+
+            <div class="project-row w-100 h-33 flex-between flex-row">
+                
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+            </div>
+
+            <div class="project-row w-100 h-33 flex-between flex-row">
+
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+            </div>
+
+            <div class="project-row w-100 h-33 flex-between flex-row">
+
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+                <div class="project-col w-33 h-100 wow animate__animated animate__fadeInRight"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-container p-4 col-12 bg-warning vh-100">
+        <h2 class="skills-topic text-center">Available Skills at The Moment</h2>
+        <div class="skills-box container h-50">
+            <div class="skills-circle w-25 bg-danger h-100 rounded rounded-circle"></div>
+            <div class="skills-text ">
+                <div class="skills-label"></div>
+                <div class="skills-explain"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="userexperience" class="user-experience-container text-center bg-warning">
+        <h2 class="user-experience-topic text-decoration-underline p-5">User Experience</h2>
+        <div class="user-experience-box d-flex justify-content-around align-items-stretch col-12">
+            <div class="card m-2 text-white-50 fw-bolder fs-5 bg-primary col-3 wow animate__animated animate__flipInX">
+                <div class="card-header">
+                    <img src="../../src/userlevel/viewer/client1.jpg" class="img-client" alt="client photo"/>
+                </div>
+                <div class="card-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eaque iusto, totam aut odit quae et obcaecati laudantium excepturi impedit commodi harum id voluptas sequi minima adipisci maiores sunt repellendus?
+                </div>
+            </div>
+            <div class="card m-2 text-white-50 fw-bolder fs-5 bg-success col-4 wow animate__animated animate__flipInX">
+                <div class="card-header">
+                    <img src="../../src/userlevel/viewer/client2.jpg" class="img-client" alt="client photo"/>
+                </div>
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magnam optio commodi quod itaque reiciendis provident corporis dolorem. Accusantium iusto necessitatibus reprehenderit voluptatum quas nostrum reiciendis totam, doloremque officiis ipsa!
+                </div>
+            </div>
+            <div class="card m-2 text-white-50 fw-bolder fs-5 bg-danger col-3 wow animate__animated animate__flipInX">
+                <div class="card-header">
+                    <img src="../../src/userlevel/viewer/client3.jpg" class="img-client" alt="client photo"/>
+                </div>
+                <div class="card-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut eaque veritatis tempora voluptatibus fugit est, architecto a tempore eveniet reiciendis dolore minima, odit iste nulla commodi velit laborum ipsum?
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="organizer" class="organized-container bg-warning">
+        <h2 class="organized-topic p-5">Organized By...</h2>
+        <div class="container d-flex justify-content-evenly col-12 align-items-stretch vh-50">
+
+            <div class="m-3 card bg-primary col-4 wow animate__animated animate__backInLeft">
+                <div class="card-header">
+                    <img src="../../src/userlevel/viewer/organizer1.jpg" class="card-img" alt="organizer1">
+                </div>
+                <div class="card-body h-75 d-flex align-items-stretch">
+                    <div class="w-50">
+                        <ol class="list-group m-1">
+                            <li class="list-group-item">Fact one</li>
+                            <li class="list-group-item">Fact two</li>
+                            <li class="list-group-item">Fact three</li>
+                            <li class="list-group-item">Fact four</li>
+                        </ol>
+                    </div>
+                    <div class="w-50">
+                        <ol class="list-group m-1">
+                            <li class="list-group-item">Fact one</li>
+                            <li class="list-group-item">Fact two</li>
+                            <li class="list-group-item">Fact three</li>
+                            <li class="list-group-item">Fact four</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="m-3 card bg-danger col-4 wow animate__animated animate__backInRight">
+                <div class="card-header">
+                    <img src="../../src/userlevel/viewer/organizer2.jpg" class="card-img" alt="organizer1">
+                </div>
+                <div class="card-body h-75 d-flex align-items-stretch">
+                    <div class="w-50">
+                        <ol class="list-group m-1">
+                            <li class="list-group-item">Fact one</li>
+                            <li class="list-group-item">Fact two</li>
+                            <li class="list-group-item">Fact three</li>
+                            <li class="list-group-item">Fact four</li>
+                        </ol>
+                    </div>
+                    <div class="w-50">
+                        <ol class="list-group m-1">
+                            <li class="list-group-item">Fact one</li>
+                            <li class="list-group-item">Fact two</li>
+                            <li class="list-group-item">Fact three</li>
+                            <li class="list-group-item">Fact four</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-warning">
+        <h1 class="fw-bold p-5 p-3">For contact, ...</h1>
+        <div class="container col-12 pb-5 d-flex">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <fieldset class="w-75 border border-dark p-4 rounded-3 bg-success wow animate__animated animate__fadeInLeft">
+                    <legend class="text-center pb-3 fs-2"><i class="fa-solid fa-lock"></i>Contact Form</legend>
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="name" class="form-label fs-4">Name: </label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="name here ..." autocomplete="off"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label fs-4">Email: </label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="email@gmail.com" autocomplete="off"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" class="form-label fs-4">Address: </label>
+                            <textarea type="text" id="address" name="address" class="form-control" placeholder="fill in your address here..." autocomplete="off"></textarea>
+                        </div>
+                        <div class="form-group d-flex justify-content-center mt-3">
+                            <input type="submit" value="Contact now" class="btn btn-danger px-3 fs-4"/>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="col-6 h-100 wow animate__animated animate__fadeInRight">
+                <div class="h-25 text-black text-center"><h1>We are here...</h1></div>
+                <div class="border border-dark overflow-hidden h-75">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d675.2930528414123!2d96.145579951181!3d16.774965272073604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1smy!2ssg!4v1652963196823!5m2!1smy!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="../../node_modules/chart.js/dist/chart.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../node_modules/wow.js/dist/wow.min.js"></script>
+<script>
+    new WOW().init();
+
+    let cards = document.querySelectorAll('.project-col');
+    for(let card=0; card<cards.length ;card++) {
+        cards[card].innerHTML = `<img src="../../src/userlevel/viewer/viewer${card + 1}.jpg" alt="project text" class="viewer-image"/>`
+    }
+
+</script>
+</html>

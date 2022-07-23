@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <style>
+        body{
+            background: #ddffe8;
+        }
+        h4{
+            font-size: 20px;
+        }
+        #pagename{
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        i{
+            font-size: 30px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container animate__animated animate__zoomIn">
+    <div class="row">
+        <div class="col-12 d-lg-flex">
+
+            <div class="col-lg-4 col-12 h-100">
+                <div class="h-50 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-warning">
+                        This is </br>
+                        <h3 class="text-danger"><span id="pagename">ADMIN</span> PAGE !!!</h3>
+                    </h1>
+                </div>
+                <div class="h-50 w-75 m-auto">
+                    <h4 class="text-success mb-4">
+                        Admin page is a place for handling the database and servers.
+                    </h4>
+                    <h4 class="text-success mb-4">
+                        Admin page can view all the websites whereas some are forbidden in other levels of viewers.
+                    </h4>
+                    <h4 class="text-success mb-4">
+                        Admins should be secretive and obey the limitations of the organization.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 h-100">
+                <div class="p-3">
+                    <div class="h-50">
+                        <h3 class="text-black-50">For users,</h3>
+                        <h5 class="text-black-50">Type in your username to check if exists</h5>
+                        <div class="d-flex m-3 justify-content-between">
+                            <input type="text" id="username" placeholder=" username... " class="form-control w-75 rounded-3" autocomplete="off"/>
+                            <input type="button" value="Check" id="userCheck" class="ml-3 btn btn-primary rounded-pill"/>
+                        </div>
+                        <h5 class="text-black">username exist = <span id="usernameExist" class="text-black px-3 py-1 rounded"></span></h5>
+                        <h5 class="text-black">password = <span id="passwordRecovery"></span></h5>
+                    </div>
+                    <div class="h-50 d-flex justify-content-center align-items-center pt-5">
+                        <img src="../../src/userlevel/admin.png" alt="image showing admin service ..." class="adminImage d-block mt-5"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 h-100">
+                <div class="">
+                    <div class="h-50 p-5 d-flex flex-column justify-content-center">
+                        <div class="link h-25 w-75 d-flex flex-row-reverse justify-content-between align-items-center mb-3">
+                            <i class="fa-solid fa-address-card"></i>
+                            <button class="btn btn-primary">My Profile</button>                            
+                        </div>
+                        <div class="link h-25 w-75 d-flex flex-row-reverse justify-content-between align-items-center mb-3">
+                            <i class="fa-solid fa-person-digging"></i>
+                            <button class="btn btn-secondary">On Going</button>
+                        </div>
+                        <div class="link h-25 w-75 d-flex flex-row-reverse justify-content-between align-items-center mb-3">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <button class="btn btn-warning">Not Completed</button>
+                        </div>
+                        <div class="link h-25 w-75 d-flex flex-row-reverse justify-content-between align-items-center mb-3">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <button class="btn btn-danger">Back To Home</button>
+                        </div>
+                    </div>
+                    <div class="h-50">
+                        <div class="h-75 rounded overflow-hidden rounded-3 p-1 mx-2">
+                            <h3 class="text-white-50 text-center bg-black mb-0">Clock</h3>
+                            <div class="w-100 d-flex h-100">
+                                <div class="w-25">
+                                    <div class="h-50 py-3 fs-5 border border-white bg-primary text-warning text-center">Hour</div>
+                                    <div class="h-50 fs-5 py-3 border border-white bg-warning text-center text-black clock" value="hour"></div>
+                                </div>
+                                <div class="w-25">
+                                    <div class="h-50 py-3 fs-5 border border-white bg-primary text-warning text-center">Min</div>
+                                    <div class="h-50 fs-5 py-3 border border-white bg-warning text-center text-black clock" value="minute"></div>
+                                </div>
+                                <div class="w-25">
+                                    <div class="h-50 py-3 fs-5 border border-white bg-primary text-warning text-center">Sec</div>
+                                    <div class="h-50 fs-5 py-3 border border-white bg-warning text-center text-black clock" value="second"></div>
+                                </div>
+                                <div class="w-25">
+                                    <div class="h-50 py-3 fs-5 border border-white bg-primary text-warning text-center">Zone</div>
+                                    <div class="h-50 fs-5 py-3 border border-white bg-warning text-center text-black clock" value="zone"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-25 w-75 mx-auto bg-danger p-2 rounded rounded-3" id="next">
+                            <div class="h-100">
+                                <div class="h-50 fs-5 w-100 d-flex justify-content-center">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="text-center">
+                                    <h2 class="text-dark">
+                                        Next Page Table
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../info.js"></script>
+<script>
+
+    let hands = document.querySelectorAll('.clock');
+    setInterval(()=>{
+        for(let hand = 0; hand < hands.length; hand++){
+            let zone = () =>{ if(d.getHours() < 12){return 'a.m.'}else{ return 'p.m.'} }
+            let d = new Date()
+            let clocks = [d.getHours(),d.getMinutes(),d.getSeconds(),zone()]
+            switch (hand){
+                case hand:
+                    hands[hand].innerText = clocks[hand]
+                    break;
+            }
+        }
+    },1000)
+
+    
+    let userCheck = document.getElementById('userCheck');
+    let usernameInput = document.getElementById('username');
+    let usernameExist = document.getElementById('usernameExist');
+    let passwordRecovery = document.getElementById('passwordRecovery');
+
+    userCheck.addEventListener('click',() => {
+        if(usernames.includes(usernameInput.value)){
+            usernameExist.innerText = 'Exists'
+            usernameExist.classList.remove('bg-danger')
+            usernameExist.classList.add('bg-success','text-white')
+            passwordRecovery.innerText = passwords[usernames.indexOf(usernameInput.value)]
+        }else{
+            usernameExist.innerText = 'Not Exists'
+            usernameExist.classList.remove('bg-success','text-white')
+            usernameExist.classList.add('bg-danger')
+            passwordRecovery.innerText = ''
+        }
+    })
+
+
+    let links = document.querySelectorAll('.link');
+    for(let link = 0;link < links.length; link++){
+        links[link].addEventListener('click', () => {
+            window.location = `../../projects/admin/admin${link+1}.html`;
+        })
+    }
+
+
+
+</script>
+</html>

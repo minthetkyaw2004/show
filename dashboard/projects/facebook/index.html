@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="../../lib/feather/facebook.svg" type="image/x-icon">
+</head>
+<body>
+    <nav class="nav">
+        <div class="left">
+            <div class="left-box">
+                <img src="../../src/facebook/fb.png" alt="" class="logo"/>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="search-input" name="search" placeholder="Search Facebook"/>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center-box">
+                <div class="center-link active">
+                    <i class="fa-solid fa-home center-icon"></i>
+                </div>
+                <div class="center-link">
+                    <i class="fa-solid fa-flag center-icon"></i>
+                </div>
+                <div class="center-link">
+                    <i class="fa-solid fa-video center-icon"></i>
+                    <span class="notification">3</span>
+                </div>
+                <div class="center-link">
+                    <i class="fa-solid fa-users center-icon"></i>
+                    <span class="notification">8</span>
+                </div>
+                <div class="center-link">
+                    <i class="fa-solid fa-table center-icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-box">
+                <div class="profile">
+                    <img src="../../src/facebook/computer.png" alt="computer" class="profile-photo"/>
+                    <span class="profile-text">Min Thet</span>
+                </div>
+                <div class="right-notification-box">
+                    <div class="right-notification">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="right-notification">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                    </div>
+                    <div class="right-notification">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="right-notification">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="fb-body">
+        <section class="left-aside"></section>
+        <section class="news-feed">
+
+            <div class="my-day-list">
+                <div class="my-day-scroll">
+                    <div class="my-day">
+                        <div class="my-day-owner">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <p class="my-day-text">Add to Your Story</p>
+                    </div>
+                    <div class="my-day">
+                        <div class="my-day-owner"></div>
+                        <p class="my-day-text"></p>
+                    </div>
+                    <div class="my-day">
+                        <div class="my-day-owner"></div>
+                        <p class="my-day-text"></p>
+                    </div>
+                    <div class="my-day">
+                        <div class="my-day-owner"></div>
+                        <p class="my-day-text"></p>
+                    </div>
+                    <div class="my-day">
+                        <div class="my-day-owner"></div>
+                        <p class="my-day-text"></p>
+                    </div>
+                    <div class="my-day">
+                        <div class="my-day-owner"></div>
+                        <p class="my-day-text"></p>
+                    </div>
+                </div>
+                <div class="my-day-next">
+                    <i class="fa-solid fa-arrow-right" style="display: block"></i>
+                </div>
+            </div>
+
+            <div class="add-post">
+                <div class="add-post-box">
+                    <div class="add-text">
+                        <img src="../../src/facebook/computer.png" alt="" class="add-text-profile"/>
+                        <div class="add-text-text-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" class="search-input" name="search" placeholder="What is on your mind? Min Thet"/>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="add-file">
+                        <div class="video">
+                            <i class="fa-solid fa-video"></i>
+                            <span>Live video</span>
+                        </div>
+                        <div class="photo">
+                            <i class="fa-solid fa-film"></i>
+                            <span>Add Photo</span>
+                        </div>
+                        <div class="emoji">
+                            <i class="fa-solid fa-smile"></i>
+                            <span>Feeling / Activity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-list"></div>
+
+
+        </section>
+        <section class="chat-box"></section>
+    </section>
+
+</body>
+<script>
+    let myDays = document.querySelectorAll('.my-day');
+    let myDayUsers = document.querySelectorAll('.my-day-owner');
+    let myDayTexts = document.querySelectorAll('.my-day-text');
+    let myDayText = ['Captain America','Iron Man','Spider Man','Thor','Doctor Strange','Ant Man']
+
+    for(let myDay=0; myDay< myDays.length; myDay++){
+        myDays[myDay].style.background=`url(../../src/facebook/myDay${myDay}.webp) center no-repeat`;
+        myDays[myDay].style.backgroundSize=`auto 100%`;
+        if(myDay != 0){
+            myDayTexts[myDay].innerText = myDayText[myDay];
+            myDayUsers[myDay].style.background=`url(../../src/facebook/myDayUser${myDay}.jpg) center no-repeat`
+            myDayUsers[myDay].style.backgroundSize=`100% 100%`;
+            myDayUsers[myDay].style.border=`2px solid var(--primary)`;
+        }
+    }
+
+    const myDayScroll = document.querySelector(".my-day-list");
+    myDayScroll.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        myDayScroll.scrollLeft += event.deltaY;
+    });
+
+</script>
+</html>

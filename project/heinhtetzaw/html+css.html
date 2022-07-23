@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML ONLY Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: rgb(85, 85, 211);
+        }
+        *{
+        font-family: 'Montserrat', sans-serif;
+        /* background-color: blue; */
+}
+
+.topic{
+    text-align: center;
+    color: white !important;
+    text-shadow:  0 1px black,0 -1px black,1px 0 black, -1px 0 black;
+    
+
+}
+.h1{
+    text-decoration: underline;
+}
+
+
+/* h3{
+    width: 470px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+} */
+.first{
+    background-color: pink;
+    border-color: pink;
+    width: 30%;
+    height: 150px;
+    border: 1px solid pink;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+.second{
+    background-color: greenyellow;
+    border-color: greenyellow;
+    width: 30%;
+    height: 150px;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+.third{
+    background-color: violet;
+    border-color: violet;
+    width: 30%;
+    height: 150px;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.usertable{
+    margin: auto;
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: orange;
+    text-align: center;
+    vertical-align: middle;
+}
+thead{
+    background-color: rgb(97, 154, 97) !important;
+}
+
+tfoot{
+    background-color: gray;
+    text-align: center;
+}
+
+
+.listitem {
+background-color: rgb(144, 218, 112);
+color: black;
+box-sizing: border-box;
+margin-bottom: 5px;
+border-radius: 10px;
+width: 30%;
+padding: 7px 10px;
+transition-duration: 1s;
+list-style-type: square;
+
+
+
+}
+.listitem:hover{
+    background-color: yellow;
+    transform: translateX(200px) translateY(-10px);
+
+
+}
+
+.formtext{
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.donation-form{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-color: pink;
+       border: 1px solid rgb(225, 183, 183);
+       border-radius: 10px;
+       /* display: block; */
+       margin-left: auto;
+       margin-right: auto;
+}
+
+
+legend{
+     text-transform: uppercase;
+     text-align: center;
+     border: 1px solid pink;
+     border-radius: 10px;
+     background-color: pink;
+}
+.form-input{
+    margin-bottom: 20px;
+
+}
+.form-input label{
+    display: block;
+    margin-bottom: 10px;
+    /* margin-left: auto; */
+
+}
+.form-input input{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 1px solid rgb(158, 147, 147);
+    background-color: rgb(158, 147, 147);
+    margin-left: 60px;
+}
+#address{
+    background-color:  rgb(158, 147, 147);
+    margin-left: 60px;
+}
+
+input[type="submit"]{
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 10px;
+    font-size: large;
+    text-align: center;
+    margin: auto;
+    display: block;
+    color: aliceblue;
+}
+#mmk{
+    position: relative;
+    bottom: 30px;
+    left: 330px;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="topic" style="color: red;">
+        <u>
+            User summary of the page
+        </u>
+    </h1>
+
+    <br/>
+
+    <h3 class="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis exercitationem unde deserunt alias vel dolores quaerat libero minus accusantium reiciendis. Beatae, sit? Rem similique, molestias nostrum maiores et quis recusandae.
+    </h3>
+
+    <h3 class="second">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, obcaecati perferendis iste animi quam error odio alias minus modi facilis facere quo, aspernatur iusto pariatur. Nobis labore nesciunt expedita magnam!
+    </h3>
+
+    <h3 class="third">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam veniam rerum expedita id corrupti laborum molestias nesciunt unde excepturi asperiores est, voluptatem praesentium similique? Earum, et quas! Dolorem, exercitationem eligendi.
+    </h3>
+
+    <hr/>
+
+    <table class="usertable" border="1">
+
+        <thead>
+            <tr>
+                <td>No.</td>
+                <td>Name</td>
+                <td>Role</td>
+                <td>Address</td>
+                <td>Donation Amount</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mg Mg</td>
+                <td>Student</td>
+                <td>Yangon</td>
+                <td>3000MMK</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Aung Aung</td>
+                <td>Doctor</td>
+                <td>Bago</td>
+                <td>2500MMK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Soe Soe</td>
+                <td>Driver</td>
+                <td>Nay Pyi Taw</td>
+                <td>500MMK</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Zaw Zaw</td>
+                <td>Businessman</td>
+                <td>Mandalay</td>
+                <td>2000MMK</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Total</td>
+                <td>8000 MMK</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br/>
+
+    <h3 class="finalwords">
+        We are going to make sure that the money you donated would be useful for the supplements to the necessary staff for all sorts of poverty in Myanmar.
+
+        <br>
+
+        Most of the money would be donated in decreasing order provided below...
+
+        <ol class="list">
+            <li class="listitem">Children for educational purposes</li>
+            <li class="listitem">Old agers for medical supplements</li>
+            <li class="listitem">Poor people for economical opportunities</li>
+            <li class="listitem">Providing green ecological environment</li>
+            <li class="listitem">Development for technological improvements</li>
+        </ol>
+    </h3>
+
+    <br/>
+
+    <h4 class="formtext">For more donations,</h4>
+
+    <fieldset class="donation-form">
+
+         <legend>Donation Form</legend>
+
+        <form action="">
+        <div  class="form-input">
+            <label for="name" >Name: </label>
+            <input type="text" name="name" id="name" class="" required autofocus  placeholder="Chan Chan">
+        </div>
+                
+                    <br/>
+        <div  class="form-input">
+            <label for="amount" >Amount: </label>
+            <input type="number" name="amount" id="amount" class="" required autofocus  placeholder="10000"> <span id="mmk">MMK</span>
+        </div>
+                
+                    <br/>
+        <div  class="form-input">
+            <label for="job" >Occupation: </label>
+            <input type="text" name="job" id="job" class="" required autofocus  placeholder="student">
+        </div>
+                
+                    <br/>
+        <div class="form-input">
+            <label for="address" >Address:</label>
+                <textarea name="address" id="address" cols="30" rows="10" required autofocus  placeholder="Please fill in your address here!"></textarea>
+        </div>
+            
+            <br/>
+
+            <input type="submit" value="Submit">
+
+            <br/>
+
+        </form>
+
+    </fieldset>
+
+</body>
+
+</html>

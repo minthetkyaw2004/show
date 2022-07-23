@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    const getRandomId = (min =0, max = 500000) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        const num = Math.ceil(Math.random()) * (max - min + 1) + min;
+        return num.toString().padStart(6, "0")
+    };
+
+    console.log(getRandomId());
+
+
+    function today(){
+        let d = new Date();
+        let day = d.getDate().toString().padStart(2,"0");
+        let month = (d.getMonth()+1).toString().padStart(2,"0");
+        let year = d.getFullYear();
+        let today = `${day}/${month}/${year}`;
+        return today;
+    }
+    today();
+
+    function createTd(){
+        let td = document.createElement("td");
+        let text = document.createTextNode("hello");
+        td.append(text);
+        return td;
+    }
+
+    let tr = document.createElement("tr");
+
+    tr.append(createTd("hello"))
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.light {
+  height: 500vh;
+}
+
+.light .navigation {
+  width: 100%;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: fixed;
+  overflow: hidden;
+  -webkit-transition: bottom 1s;
+  transition: bottom 1s;
+  z-index: 1000;
+}
+
+.light .navigation .list-group-item {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.light .navigation .list-group-item .list-item {
+  display: block;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  font-size: 26px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.light .navigation .list-group-item .list-item svg {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.light .navigation .list-group-item .list-item::before {
+  content: '';
+  width: 10%;
+  height: 0%;
+  background-color: lime;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.light .navigation .list-group-item .list-item::after {
+  content: '';
+  width: 10%;
+  height: 0%;
+  background-color: lime;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.light .navigation .list-group-item .list-item:active {
+  color: red;
+  background-color: #707070;
+}
+
+.light .navigation .list-group-item .list-item:active::before {
+  width: 50%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.light .navigation .list-group-item .list-item:active::after {
+  width: 50%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.light .navigation .list-group-item #homebtn {
+  padding-left: 20px;
+  width: 40%;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 26px;
+  background: url("./src/img/home.jpg");
+  background-position: center;
+  background-size: 100%;
+}
+
+.light .navigation .list-group-item #homebtn:active {
+  background: inherit;
+}
+
+.light .navigation .navslide {
+  display: none;
+  background-color: #a0a0a0;
+}
+
+.light .navigation .navslide .navrow {
+  padding: 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 0px 1px black;
+          box-shadow: 0px 0px 1px black;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.light .navigation .navslide .navrow:active {
+  background: gray;
+  color: #fff;
+  font-weight: bold;
+}
+
+.light .home {
+  background: url("./src/img/bg1.jpg");
+  background-size: 100% 100%;
+}
+
+.light .home .card {
+  -webkit-box-shadow: 0px 0px 30px black;
+          box-shadow: 0px 0px 30px black;
+}
+
+.light .home #introduce {
+  text-shadow: 0 1px white, 0 -1px white, 1px 0 white, -1px 0 white;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.light .home #introduce::before {
+  content: '';
+  width: 100%;
+  height: 110%;
+  background-color: #dc3545;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(112%);
+          transform: translate(112%);
+  -webkit-animation: nameshow 7s ease-out 3s infinite alternate;
+          animation: nameshow 7s ease-out 3s infinite alternate;
+}
+
+.light .about {
+  background: url("./src/img/bg2.jpg");
+  background-blend-mode: darken;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.light .about .text-primary {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 30px;
+  border-radius: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid black;
+}
+
+.light .about .text-primary:active {
+  background-color: #8989ff;
+  color: rgba(18, 15, 15, 0.8) !important;
+  -webkit-box-shadow: -3px -3px 30px purple;
+          box-shadow: -3px -3px 30px purple;
+}
+
+.light .about .label-group h3 {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 22px;
+  background-color: rgba(219, 253, 255, 0.614);
+  padding: 8px 0;
+}
+
+.light .about .input-group .mt-2 {
+  margin-top: 7px !important;
+  font-size: 20px;
+}
+
+.light .about .input-group input {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  padding: 8px 0;
+  background-color: #292929bb;
+  color: #eeeeee;
+  font-weight: bold;
+  border: 0px;
+}
+
+.light .about .input-group input:active {
+  background-color: #393939bb;
+  -webkit-box-shadow: 0px 0px 10px aqua;
+          box-shadow: 0px 0px 10px aqua;
+}
+
+.light .about .fs-3 {
+  color: #fffefe !important;
+  background-color: #3422aaf3;
+  padding: 10px 0;
+}
+
+.light .about .card {
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.772);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.772);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.light .about .card box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.light .about .card:active {
+  -webkit-transform: translateY(-10px) rotate(360deg);
+          transform: translateY(-10px) rotate(360deg);
+  -webkit-box-shadow: 0px 20px 10px #ff5a5a;
+          box-shadow: 0px 20px 10px #ff5a5a;
+}
+
+.light #plan .card {
+  -webkit-box-shadow: 2px 5px 10px black;
+          box-shadow: 2px 5px 10px black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.light #plan .card:hover {
+  -webkit-transform: translateY(-5px) scale(1.1);
+          transform: translateY(-5px) scale(1.1);
+}
+
+.light #plan .h-10 {
+  height: 10%;
+}
+
+.light #plan .img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: 30%;
+}
+
+.light .contact .form-place {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.light .contact legend {
+  background: #3322aa;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.light .contact .form-button {
+  width: 40%;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.light .contact .form-button:active {
+  background: #70707055;
+}
+
+.turnover {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.down {
+  bottom: 0;
+}
+
+.dark {
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(violet));
+  background: linear-gradient(blue, violet);
+}
+
+.dark .navigation {
+  background: #a0a0c0;
+}
+
+.dark .navigation .list-group-item {
+  background: #a0a0a0;
+  color: #eeeeee;
+}
+
+.dark #home .card {
+  background: #006995 !important;
+}
+
+.dark #home #introduce::before {
+  background-color: #006995 !important;
+}
+
+.dark #about input {
+  background-color: #3322aa;
+}
+
+.dark #plan .card {
+  background: #4d33f7 !important;
+}
+
+.dark #plan .card .card-body p {
+  color: #fff !important;
+}
+
+.dark #contact .card {
+  background-color: #3322aa !important;
+}
+
+.dark #contact legend {
+  background-color: #cb00ba;
+}
+
+.dark #contact label {
+  color: #eeeeee !important;
+}
+
+.dark #contact input, .dark #contact textarea {
+  background-color: #a0a0a0;
+  color: white;
+}
+
+.dark #contact input[type="submit"], .dark #contact button {
+  background-color: #8161ff;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

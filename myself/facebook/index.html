@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        :root{
+            --warning: #fa3e3e;
+            --success: #00a400;
+            --text: #216fdb;
+            --secondary: #576b95;
+            --selected: #90949c;
+
+            --grey: #8a8d91;
+            --credit: grey;
+        }
+        *{
+            font-family: sans-serif;
+            user-select: none;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .alerts{
+            background: #fffbe2;
+            width: 100%;
+            font-size: 90%;
+            color: #3b5998;
+            padding: 10px;
+            padding-left: 70px;
+            background-image: url('./phone.png');
+            background-size: 26px auto;
+            background-position: 20px 0;
+            background-repeat: no-repeat;
+        }
+        input{
+            background-color: #f5f6f7 !important;
+            border: 1px solid #e3e3e3 !important;
+            box-shadow: 0px 1px 1px rgb(193, 186, 186);
+            font-size: 90% !important;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .inputs:focus-visible,.inputs:active{
+            outline: none !important;
+            border: 1px solid black !important;
+            box-shadow: none;
+        }
+        #password{
+            width: 100%;
+            position: relative;
+        }
+        .showtoggles{
+            position: absolute;
+            background-color: #f5f6f7;
+            border: 1px solid #e3e3e3 !important;
+            width: 17%;
+            padding: 9px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+        #showpw{
+            display: none;
+        }
+        #hidepw{
+            display: none;
+        }
+        .logo{
+            transform: scale(0.8,0.8);
+            cursor: pointer;
+        }
+        #lines{
+            margin: 2px 0;
+            margin-bottom: 6px;
+            /* background-color: black; */
+            position: relative;
+            color: rgb(95, 88, 88);
+        }
+        #lines::before{
+            content: '';
+            width: 46%;
+            height: 2%;
+            background-color: rgb(197, 182, 182);
+
+            position: absolute;
+            left: 0;
+            top: 49%;
+        }
+        #lines::after{
+            content: '';
+            width: 46%;
+            height: 2%;
+            background-color: rgb(197, 182, 182);
+
+            position: absolute;
+            right: 0;
+            top: 49%;
+        }
+        .language-selected{
+            color: #9094a9;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+        .languages{
+            font-size: 14px;
+            color: #576b95;
+            cursor: pointer;
+            user-select: none;
+        }
+        .languages:hover, .languages:active{
+            color: #216fdb;
+            text-decoration: underline;
+        }
+        .btn-success{
+            background-color: #00a400;
+            font-size: 90%;
+            font-weight: bold;
+        }
+        .pluss{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 6px;
+        }
+        #controls{
+            width: fit-content;
+            margin: auto;
+            position: relative;
+        }
+        #controls::before{
+            content: '';
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: grey;
+
+            position: absolute;
+            left: 35px;
+            top: 55%;
+        }
+        #controls::after{
+            content: '';
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: grey;
+
+            position: absolute;
+            left: 68px;
+            top: 55%; 
+        }
+        #controls span{
+            font-size: 10px;
+            margin: 0px 4px;
+            color: rgb(115, 109, 109);
+            cursor: pointer;
+        }
+        .copyrights{
+            margin-top: 10px;
+            font-size: 14px;
+            color: rgb(115, 109, 109);
+        }
+    </style>
+</head>
+<body>    
+
+    <div class="">
+
+        <div class="alerts">
+            <span>Get Facebook for Android and browse faster!</span>
+        </div>
+
+        <div class="col-lg-4 col-md-8 col-10 m-auto">
+
+            <div class="d-flex justify-content-center">
+                <img src="./facebook.svg" alt="facebook" height="50px" id="logo" class="logo" />
+            </div>
+
+            <form action="">
+
+                <div class="form-group mb-2">
+                    <input type="text" placeholder="Mobile number or email address" class="inputs" />
+                </div>
+
+                <div class="form-group mb-3 password">
+                    <input type="password" placeholder="Password" id="password" class="inputs" />
+                    <span id="showpw" class="showtoggles">Show</span>
+                    <span id="hidepw" class="showtoggles">Hide</span>
+                </div>
+
+                <div class="form-group mb-1 d-grid">
+                    <button type="button" class="btn btn-primary rounded-1 fw-bold">Log In</button>
+                </div>
+
+            </form>
+
+            <div class="row justify-content-center">
+                <a href="https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2F&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&_rdr" class="text-decoration-none text-center" style="font-size: 14px;">Forgotten password?</a>
+            </div>
+
+            <div class="text-center">
+                <p id="lines">or</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <a href="https://m.facebook.com/reg/?cid=103&refsrc=deprecated&_rdr" class="btn btn-success p-2 px-3 m-auto">Create New Account</a>
+            </div>
+
+        </div>
+
+        <div class="col-md-8 col-12 m-auto" style="padding-top: 20vh;">
+            
+            <div class="d-flex m-5 justify-content-between">
+
+                <div class="col-md-2 col-4 text-center">
+                    <p class="m-0 language-selected">English (UK)</p>
+                    <p class="m-0 languages">ภาษาไทย</p>
+                    <p class="m-0 languages">Bahasa Melayu</p>
+                    <p class="m-0 languages">Português (Brasil)</p>
+                </div>
+
+                <div class="col-md-2 col-4 text-center">
+                    <p class="m-0 languages">မြန်မာဘာသာ</p>
+                    <p class="m-0 languages">中文(简体)</p>
+                    <p class="m-0 languages">Español</p>
+                    <button type="button" class="btn btn-outline-dark fs-5 pluss">+</button> 
+                </div>
+
+            </div>
+
+            <div>
+                <div id="controls">
+                    <span onclick="window.location='https:\/\/about.facebook.com/?refid=8'">About</span>  <span onclick="window.location='https:\/\/m.facebook.com/help/?ref=pf&refid=8'">Help</span>  <span>More</span>
+                </div>
+                <p class="text-center copyrights">Meta &copy; <span id="yearnow"></span></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+
+        // link
+        let logo = document.getElementById('logo');
+        logo.addEventListener('click',function(){
+           window.location.reload(); 
+        });
+        
+        // show password
+        let showbtn = document.getElementById('showpw');
+        let hidebtn = document.getElementById('hidepw');
+        
+        showbtn.addEventListener('click',function(){
+            showbtn.style.display = 'none';
+            hidebtn.style.display = 'inline-block';
+            document.getElementById('password').setAttribute('type','text');
+        });
+        hidebtn.addEventListener('click',function(){
+            hidebtn.style.display = 'none';
+            showbtn.style.display = 'inline-block';
+            document.getElementById('password').setAttribute('type','password');
+        })
+        
+        // show btn
+        let password = document.getElementById('password');
+        password.addEventListener('focus',function(){
+            password.style.width = '80%';
+            showbtn.style.display = 'inline-block';
+        });
+
+        // for copyright
+        let yearnow = new Date().getUTCFullYear();
+        let yearNow = document.getElementById('yearnow');
+        yearNow.innerText = yearnow;
+
+    </script>
+</body>
+</html>

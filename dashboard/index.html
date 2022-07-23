@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="./lib/feather/globe.svg" type="image/x-icon">
+</head>
+<body>
+    <i onclick="$('#navbtn').fadeOut('slow',function(){$('#navbar').slideDown()});document.getElementById('dashboard').classList.toggle('full')" id="navbtn" class="fa-solid fa-angles-down"></i>
+
+    <nav class="navbar" id="navbar">
+        <h4 class="navbar-top">
+            <i onclick="$('#navbar').slideUp('slow', function(){$('#navbtn').fadeIn('slow')});document.getElementById('dashboard').classList.toggle('full')" id="toggleNavbar" class="fa-solid fa-angles-up"></i>
+            Dashboard
+        </h4>
+
+        <ul class="navbar-trunks" id="navbar-grid">
+            <li class="navbar-trunk">
+                HOME <i class="fa-solid fa-home"></i>
+            </li>
+            <li class="navbar-trunk">
+                <h3 onclick="file1.classList.toggle('hide');">
+                    Basic Language <i class="fa-solid fa-file-code"></i>
+                </h3>
+                <ul class="navbar-languages hide" id="basicLanguage">
+                    <li class="navbar-language">
+                        <span> HTML </span><i class="fa-brands fa-html5"></i>
+                    </li>
+                    <li class="navbar-language">
+                        <span> CSS </span><i class="fa-brands fa-css3-alt"></i>
+                    </li>
+                    <li class="navbar-language">
+                        <span> JS </span><i class="fa-brands fa-js"></i>
+                    </li>
+                </ul>            
+            </li>
+            <li class="navbar-trunk">
+                <h3 onclick="file2.classList.toggle('hide')">
+                    Library usages <i class="fa-solid fa-book"></i>
+                </h3>
+                <ul class="navbar-languages hide" id="libraryUsage">
+                    <li class="navbar-language">
+                        <span> BOOTSTRAP </span><i class="fa-brands fa-bootstrap"></i>
+                    </li>
+                    <li class="navbar-language">
+                        <span> JQUERY </span><i class="fa-solid fa-book-bookmark"></i>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-trunk">
+                <h3 onclick="file3.classList.toggle('hide')">
+                    Frameworks <i class="fa-solid fa-crop-simple"></i>
+                </h3>
+                <ul class="navbar-languages hide" id="framework">
+                    <li class="navbar-language">
+                        <span> SCSS </span><i class="fa-brands fa-sass"></i>
+                    </li>
+                    <li class="navbar-language">
+                        <span> REACT </span><i class="fa-brands fa-react"></i>
+                    </li>
+                </ul>  
+            </li>
+            <li class="navbar-trunk">
+                <span> Planned schemes </span><i class="fa-solid fa-calendar"></i>
+            </li>
+            <li class="navbar-trunk">
+                <span> Goals </span><i class="fa-solid fa-flag"></i>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="dashboard-place" id="dashboard">
+        <section class="dashboard">
+            <div class="note-area">
+                <div class="note-head">
+                    <h1 class="note-topic">
+                        Welcome To Dashboard <i class="fa-solid fa-smile"></i> !!!
+                    </h1>
+                </div>
+                <div class="note-main">
+                    <div class="note-one">
+                        <h3 class="note-header">
+                            <i class="fa-solid fa-arrow-right"></i> Rules and Regulations
+                        </h3>
+                        <ul class="note-list">
+                            <li class="note-list">
+                                This is a collaboration of new-coming developers so positive ideas are encouraged.
+                            </li>
+                            <li class="note-list">
+                                Please pay respect to each authors as it is just a testing sample of a community.
+                            </li>
+                            <li class="note-list">
+                                Copyrights and code modification are freely allowed.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="note-two">
+                        <h3 class="note-header">
+                            <i class="fa-solid fa-arrow-right"></i>  Policies
+                        </h3>
+                        <ul class="note-list">
+                            <li class="note-list">
+                                New-coming developers from all fields of environment are welcome to our community.
+                            </li>
+                            <li class="note-list">
+                                Support us at <a href="https://www.github.com/developers2022/">https://www.github.com/developers2022/</a>
+                            </li>
+                            <li class="note-list">
+                                Contact us for more information, mail us at <a href="mailto:developers2022@gmail.com">developers2022@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-area">
+                <fieldset class="form-place">
+                    <legend class="form-logo">
+                        <i class="fa-solid fa-lock"></i><span> Login</span>
+                    </legend>
+                    <form action="" class="login-form">
+
+                        <i class="fa-solid fa-person"></i>
+                        <label for="username" class="label-text">Username: </label>
+                        <input type="text" autocomplete="off" id="username" class="input-word" placeholder="aung aung"/>
+                        <br/><br/>
+
+                        <i class="fa-solid fa-eye"></i>
+                        <label for="password" class="label-text">Password: </label>
+                        <input type="password" autocomplete="off" id="password" class="input-word" placeholder="password"/>
+                        <br/><br/>
+
+                        <i class="fa-solid fa-user-check"></i>
+                        <label for="userLevel">User Level: </label>
+                        <select name="user-level" id="userLevel">
+                            <option value="admin"> Admin </option>
+                            <option value="member"> Member </option>
+                            <option value="viewer"> Viewer </option>
+                        </select>
+                        <br/><br/>
+
+                        <input type="submit" value="Submit" id="submit"/>
+
+                    </form>
+                </fieldset>
+            </div>
+        </section>
+        <section class="bye-text">
+            <div class="bye-place">
+                <h3 class="bye-text"> ~~~ Thank you for visiting this dashboard ... ~~ </h3>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/fontawesome/js/all.min.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./userlevel/info.js"></script>
+<script src="./js/home.js"></script>
+</html>
+
