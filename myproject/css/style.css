@@ -1,0 +1,91 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    background: rgba(128, 128, 128, 0.776);
+}
+
+.nav-link{
+    transition: all .5s;
+}
+
+.nav-link:hover{
+    color: white !important;
+}
+
+.banners{
+    background: url('../src/img/bg/bg1.jpg');
+}
+
+.banners .boxs{
+    border-radius: 15px;
+}
+
+.topics{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.card{
+    box-shadow: 2px 2px 10px black;
+}
+
+#services img{
+    width: 100%;
+    height: 200px;
+}
+
+#users .card{
+    /* margin: 3px; */
+    box-sizing: border-box;
+
+    box-shadow: 3px 3px 10px black;
+    /* width: 25%; */
+}
+
+#users img, #abouts img{
+    width: fit-content;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+@media (min-width:726px) {
+   
+    #users .card{
+        /* margin: 3px; */
+        box-sizing: border-box;
+    }
+    
+}
+
+#users .card{
+    /* margin: 3px; */
+    box-sizing: border-box;
+}
+
+.forms{
+    background-color: rgb(36, 168, 135);
+    border-radius: 20px;
+}
+
+.form-label{
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+}
+
+iframe{
+    height: 450px;
+}
