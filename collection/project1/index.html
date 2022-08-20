@@ -18,8 +18,11 @@
     <section class="p-3">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
-                    <form action="" method="">
+                <div id="input" class="col-md-6 col-12 user-select-none">
+
+                    <h1 class="text-dark text-center text-decoration-underline">Contact Form</h1>
+
+                    <form action="" method="" class="p-3">
 
                         <div class="form-group mb-3">
                             <input type="text" name="name" id="name" class="form-controls" />
@@ -30,18 +33,15 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="number" name="age" id="age" class="form-controls" />
+                            <input type="text" name="birthdate" id="birthdate" class="form-controls" />
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="datetime" name="birthdate" id="birthdate" class="form-controls" />
-                        </div>
-
-                        <div class="form-group mb-3">
+                            <label class="fs-5 mx-3">Gender : : </label>
                             <input type="radio" name="gender" value="1" id="male" class="form-choices" />
-                            <label for="male" class="form-labels">Male</label>
-                            <input type="radio" name="gender" value="0" id="female" class="form-choices" />
-                            <label for="female" class="form-labels">Female</label>
+                            <label for="male" class="fs-5 ms-1 form-labels">Male</label>
+                            <input type="radio" name="gender" value="0" id="female" class="ms-3 form-choices" />
+                            <label for="female" class="fs-5 ms-1 form-labels">Female</label>
                         </div>
 
                         <div class="form-group mb-3">
@@ -81,15 +81,40 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <input type="checkbox" name="accept" id="accept" class="form-checks" />
-                            <label for="accept" class="form-labels">I accept the agreements of all the statements.</label>
+                            <textarea name="address" id="address" placeholder="Enter Your Address" class="form-controls"></textarea>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <button type="button" id="submit" class="btn btn-primary"> Click To Submit </button>
+                        <div class="form-group form-check form-switch mb-3">
+                            <input type="checkbox" name="accept" id="accept" class="form-check-input" style="transform: translateY(30%);" />
+                            <label for="accept" class="fs-5 form-labels">I accept the agreements of all the statements.</label>
+                        </div>
+
+                        <div class="form-group d-grid mb-3">
+                            <button type="button" id="submit" class="btn fs-4 form-btns"> Click To Submit </button>
                         </div>
 
                     </form>
+                </div>
+                <div id="output" class="col-md-6 col-12 bg-dark text-light">
+                    <div class="box">
+                        <textarea name="output" id="output" cols="30" rows="10"></textarea>
+                        <p id="outputtext">
+                            Name : <b id="nameout"></b> 
+                            <br/>
+                            Email : <b id="emailout"></b> 
+                            <br/>
+                            Age : <b id="ageout"></b> 
+                            <br/>
+                            Date Of Birth : <b id="dobout"></b> 
+                            <br/>
+                            Address : <b id="addressout"></b>
+                            <br/>
+                            Country Of Citizenship : <b id="countryout"></b> 
+                            <br/>
+                            Respective Search Of Google : <b id="searchout"></b> 
+                            <br/>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
