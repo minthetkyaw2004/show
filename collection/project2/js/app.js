@@ -3,6 +3,8 @@ document.getElementById('note').style.background = 'white';
 
 let objects = {};
 
+let lists = document.querySelectorAll('li');
+
 if(localStorage.getItem('noteapp')===null){
     
     objects = {};
@@ -11,21 +13,6 @@ if(localStorage.getItem('noteapp')===null){
 
     objects = JSON.parse(localStorage.getItem('noteapp'));
     recall();
-
-}
-
-let lists = document.querySelectorAll('li');
-
-for(let y = 1; y < lists.length + 1; y++){
-    // console.log(lists[y]);
-    
-    lists[y-1].addEventListener('click',function(){
-        let show = `objects.list${y}.id`;
-        eval(show);
-
-        eval(`delete objects.list${y}`);
-        localStorage.setItem('noteapp',JSON.stringify(objects));
-    });
 
 }
 
@@ -63,6 +50,23 @@ function recall(){
     }
 }
 
+function change(){
+
+    let lists = document.querySelectorAll('.index');
+    
+    for(let list=0; list< lists.length; list++){
+        lists[list].setAttribute('id',list+1);
+        lists[list].innerText = lists[list].getAttribute('id');
+
+        lists[list].addEventListener('click',function(){
+            console.log('hi');
+        });
+    }
+
+    localStorage.setItem("noteapp",JSON.stringify(objects));
+
+};
+
 function add(){
 
     if(document.getElementById('note').value === ''){
@@ -73,9 +77,9 @@ function add(){
 
         let index = document.querySelectorAll('.index').length + 1;
 
-        document.getElementById('history').innerHTML += `<li><span class="index" data="${document.getElementById('note').style.background}">${index}</span>${document.getElementById('note').value}</li>`;
+        document.getElementById('history').innerHTML += `<li onclick="this.remove(); delete objects.list${index}; change(); "><span class="index" data="${document.getElementById('note').style.background}">${index}</span>${document.getElementById('note').value}</li>`;
 
-        let task = `objects.list${index} = '<li><span class="index" data="${document.getElementById('note').style.background}">${index}</span>${document.getElementById('note').value}</li>'`;
+        let task = `objects.list${index} = '<li onclick="this.remove(); delete objects.list${index}; change(); "><span class="index" data="${document.getElementById('note').style.background}">${index}</span>${document.getElementById('note').value}</li>'`;
 
         eval(task);
 

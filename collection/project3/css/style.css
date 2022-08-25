@@ -80,9 +80,21 @@
 	letter-spacing: 3px;
 }
 
+#whole{
+	transform: translateY(10vh) scale(0.9,1.2);
+	transform-origin: top;
+}
+
 @media (min-width: 726px){
 	.col-12{
 		width: 50%;
 		margin: auto;
+	}
+
+	#whole{
+		margin: auto;
+		width: 40%;
+		transform:scale(1.5,1.5);
+		transform-origin: top;
 	}
 }
